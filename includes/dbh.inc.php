@@ -2,7 +2,7 @@
 
 $dsn = "mysql:host=localhost;dbname=myfirstdatabase"; //correct
 $dbusername = "root";
-$dbpassword = "";
+$dbpassword = "macbookair";
 
 
 try{

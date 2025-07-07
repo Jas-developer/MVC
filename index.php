@@ -18,6 +18,7 @@
     <input type="text" name="username" placeholder="Username">
     <input type="password" name="password" placeholder="Password">
     <input type="email" name="email" placeholder="E-Mail">
+    <button type="submit" > SIGN UP </button>
   </form>
 
   </div>
