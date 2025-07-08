@@ -2,7 +2,7 @@
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
    $username = $_POST["username"];
-   $pwd = $_POST["password"];
+   $pwd = $_POST["pwd"];
    $email = $_POST["email"];
 // TRY CATCH BLOCK
    try{
