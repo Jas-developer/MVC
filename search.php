@@ -1,4 +1,10 @@
 <?php
+
+ 
+session_start();
+
+
+
 // CHECK IF THE REQUEST METHOD IS POST 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
@@ -39,13 +45,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
      echo "<div>";
      echo "</div>";
    }else {
+     $_SESSION["username"] = $usersearch;
      foreach($results as $row){
-       echo 
-          "<div>
-               $name = htmlspecialchars($row["username"]);
-               $comment = htmlspecialchars($row["comment_text"]);   
-               echo "<h4> $name: $comment </h4> </br>";
-          </div>"
+      $name = htmlspecialchars($row["username"]);
+      $comment = htmlspecialchars($row["comment_text"]);   
+       echo "<div>";  
+       echo "<h4> $name: $comment </h4> </br>";
+       echo "</div>";
      };
    };
  ?>
