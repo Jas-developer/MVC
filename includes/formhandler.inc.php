@@ -9,13 +9,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     require_once "dbh.inc.php";
     
    $query = "INSERT INTO users (username, pwd, email ) VALUES 
-   (":username",":pwd",":email");";
+   (:username,:hashedPassword,:email);";
 
 
    $stmt = $pdo->prepare($query);
 
+   $options = [
+    'cost' => 12
+   ];
+
+$hashedPassword = password_hash($pwd, PASSWORD_BCRYPT, $options);
+
    $stmt->bindParam(":username", $username);
-   $stmt->bindParam(":pwd", $pwd);
+   $stmt->bindParam(":hashedPassword", $hashedPassword);
    $stmt->bindParam(":email", $email);
    
    $stmt->execute();

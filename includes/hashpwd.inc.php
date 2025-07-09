@@ -2,8 +2,8 @@
 
 $pwdSignup = "Krossing";
 $options = [
-    'cost' => 12;
-]
+    'cost' => 12
+];
 
 $hashedPassword = password_hash($pwdSignup, PASSWORD_BCRYPT, $options);
 $pwdLogin = "Krossing";
